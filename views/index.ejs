@@ -1,0 +1,68 @@
+﻿<% include partials/header%>
+
+<div class="homepage" align="center">
+    <h1>Listings</h1>
+</div>
+
+
+<div class="card-deck container">
+    <div class="card-columns">
+        <% mod.forEach(function(item) { %>
+        <div class="custom">
+            <div class="card mt-3" style="width: 20rem; border-radius:40px;">
+                <div class="card-block ">
+                    <a id="<%=item.id%>" href="#"><img src="<%=item.PhotoPath%>" style="width:200px; height:auto;" /></a>
+                    <h4 class="card-title"><%=item.Street%></h4>
+                    <p class="card-text">$<%=item.Price%>.00</p>
+                    <p class="card-text"><%=item.AboutShort%></p>
+                </div>
+            </div>
+        </div>
+        
+        <% }); %>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var c = "card-primary";
+        $(".card").mouseover(function (e) {
+            $(e.target).closest(".card").css("background-color", "#96B296")
+        }).mouseout(function (e) {
+            $(e.target).closest(".card").css("background-color", "")
+        })
+    });
+
+    $("a").click(function (e) {
+        var id = e.currentTarget.id;
+        $.ajax({
+            url: "/homes/" + id,
+            type:"post",
+            success: function (data) {
+                $dialog = $("<div></div>")
+                    .dialog({
+                        modal: true,
+                        title: "Home:" + id,
+                        dragable: true,
+                        resizable: true,
+                        height: 880,
+                        width: 875,
+                        buttons: [
+                            {
+                                text: "Close",
+                                "class": "btn btn-default",
+                                click: function () {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        ]
+                    }).html(data)
+                       .dialog("open");
+            }
+        })
+    })
+</script>
+
+
+    <% include partials/footer%>

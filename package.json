@@ -1,0 +1,33 @@
+{
+  "name": "node-web-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "description": "NodeWebApp",
+  "author": {
+    "name": "jake"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.0",
+    "debug": "^2.2.0",
+    "ejs": "^2.5.7",
+    "express": "^4.14.0",
+    "faker": "^4.1.0",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.15.0",
+    "pixabay-api": "^1.0.4",
+    "pixabayjs": "^2.0.3",
+    "pug": "^2.0.0-beta6",
+    "serve-favicon": "^2.3.0",
+    "tether": "^1.4.3",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "devDependencies": {
+    "nodemon-webpack-plugin": "^0.1.6",
+    "webpack-node-externals": "^1.6.0"
+  }
+}

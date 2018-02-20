@@ -1,0 +1,3 @@
+C:\Users\jake\Documents\Visual Studio 2017\Projects\NodeProjects\NodeWebApp\obj\Debug\NodeWebApp.njsprojResolveAssemblyReference.cache
+C:\Users\jake\Documents\Visual Studio 2017\Projects\NodeProjects\NodeWebApp\obj\Debug\NodeWebApp.njsproj.CoreCompileInputs.cache
+C:\Users\jake\Documents\Visual Studio 2017\Projects\NodeProjects\NodeWebApp\bin\Microsoft.NodejsTools.WebRole.dll
